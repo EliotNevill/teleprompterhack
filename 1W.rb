@@ -2,6 +2,8 @@
 
   require 'rubygems'
   require 'sinatra'
+  require 'time'
+
 
   #Data
   #
@@ -10,7 +12,8 @@
   #Code
 
 get '/' do
-redirect '/views/index.html'
+	@date = Time.now
+	erb :index
 end
 
 

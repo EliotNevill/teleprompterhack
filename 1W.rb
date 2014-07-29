@@ -11,5 +11,5 @@
   #Code
 
 get '/' do
-  redirect '/home.html'
+  redirect '/index.html'
 end

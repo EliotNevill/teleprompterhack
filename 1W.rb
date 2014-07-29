@@ -2,7 +2,7 @@
 
   require 'rubygems'
   require 'sinatra'
-  
+  require 'datamapper'
 
   #Data
   #
@@ -13,3 +13,5 @@
 get '/' do
   redirect '/index.html'
 end
+
+

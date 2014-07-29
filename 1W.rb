@@ -10,7 +10,7 @@
   #Code
 
 get '/' do
-  redirect 'views/index.html'
+redirect '/views/index.html'
 end
 
 

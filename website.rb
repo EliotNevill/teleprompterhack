@@ -4,9 +4,31 @@ require 'dm-migrations'
 
 require 'sinatra'
 require 'erb'
+require 'open-uri'
+require 'time'
 
+  #Words and their corrosponding weight
+  class WordAndWeight
+    def initialize(word , weight)
+      @word = word
+      @weight = Math.log(40000 /  weight.to_f)
+    end
+  end
 
-# A Sqlite3 connection to a persistent database (should make relative to this script)
+  #Creating a list of words and their weights
+  wordandweightlist = Array.new
+  web_file = open("http://ucrel.lancs.ac.uk/bncfreq/lists/2_2_spokenvwritten.txt")
+  web_file.each_line do |line|
+    linesegment = line.split("\t")
+    tempWord = WordAndWeight.new( linesegment[1] , linesegment[3] )
+    wordandweightlist.push(tempWord)
+    puts "#{wordandweightlist.last.instance_variable_get("@word")}\t#{wordandweightlist.last.instance_variable_get("@weight")}"
+  end
+  wordandweightlist.pop()
+  wordandweightlist.pop()
+
+  
+ # A Sqlite3 connection to a persistent database (should make relative to this script)
  DataMapper.setup(:default, 'sqlite:///C:\Users\Orbital Think Pa\Documents\GitHub\teleprompterhack\project.db')
  
  
@@ -41,15 +63,15 @@ require 'erb'
  	@date = Time.now
  	@posts = Post.all
   erb :posts 
- end
- 
+end
+
  # Add a new post to the database send params through the POST request
  post '/add' do
    @post = Post.create(
      :title => params[:title],
      :body => params[:body],
      :created_at => Time.now
-   )
+     )
    puts "Added a new post titled: #{@post.title}"
  end
  
@@ -62,8 +84,8 @@ require 'erb'
      :title      => "My First Speech",
      :body       => "This is my speech about Young Rewired State. I loved it. See you next year",
      :created_at => Time.now
-   )
- 
+     )
+   
    @post.save
  end
  

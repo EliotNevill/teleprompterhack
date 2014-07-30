@@ -2,8 +2,6 @@ require 'rubygems'
 require 'data_mapper' # requires all the gems listed above
 require 'dm-migrations'
 require 'sinatra'
-require 'erb'
-
 
 #require './word_processing'
 require 'time'

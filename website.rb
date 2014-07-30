@@ -2,8 +2,9 @@ require 'rubygems'
 require 'data_mapper' # requires all the gems listed above
 require 'dm-migrations'
 require 'sinatra'
+require 'json'
 
-require './word_processing'
+#require './word_processing'
 require 'time'
 
 
@@ -99,7 +100,10 @@ get '/setup' do
 end
 
 get '/getwords' do
-  WordFreq.destroy
+
+ # return "Disabled"
+
+  WordFreq.destroy    # Deletes all existing words in the dictoinary
   wordcount = 0
   web_file = open("http://ucrel.lancs.ac.uk/bncfreq/lists/2_2_spokenvwritten.txt")
   
@@ -107,24 +111,20 @@ get '/getwords' do
   web_file.each_line do |line|
     if wordcount > 0 then  # first line is header
       items = line.split("\t")
-      puts items
+      mult = items[4]=='+'?1:-1
       @word = WordFreq.new(
-        word:        items[1],
+        word:        items[1],  :index => true,    # indexed so we can search for it faster
         pos:         items[2],
         f_spoken:    items[3].to_i,
-        ll:          items[5].to_f,
+        ll:          items[5].to_f * mult,
         f_writen:    items[6].to_i
       )
       if !@word.save then
         return "Failed to save"
       end
-            puts @word.word
+      #      puts @word.word
     end
     wordcount = wordcount+1 
-
-    if wordcount > 5 then
-     return "done 5 words"
-    end 
     
   end
   "loaded #{wordcount} words"
@@ -132,18 +132,36 @@ end
 
 get '/word/:word' do 
   word = params[:word]
-  p word
 
   @wordinfo = WordFreq.first(:word => word)
   if !@wordinfo.nil? then
     erb :wordinfo
+  else
+     return 'not found'
   end
 
 end
 
+get '/word_json/:word' do
+  word = params[:word]
+
+  @wordinfo = WordFreq.first(:word => word)
+  if !@wordinfo.nil? then
+    content_type :json
+    @wordinfo.to_json
+  end
+  
+end
+
+
 get '/words' do
    @words = WordFreq.all
    erb :wordlist
+end
+
+get '/speechwords' do
+  @words = WordFreq.all(:ll.gt => 0, :ll.lt => 1000)
+  erb :wordlist
 end
 
 

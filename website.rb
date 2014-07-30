@@ -1,9 +1,9 @@
 require 'rubygems'
 require 'data_mapper' # requires all the gems listed above
 require 'dm-migrations'
-
 require 'sinatra'
 require 'erb'
+<<<<<<< HEAD
 
 
 # A Sqlite3 connection to a persistent database (should make relative to this script)
@@ -13,20 +13,36 @@ require 'erb'
  # Define a Post object to store a posted speech
  class Post
    include DataMapper::Resource
+=======
+require './word_processing'
+require 'time'
+
+
+
+  
+# A Sqlite3 connection to a persistent database (should make relative to this script)
+ DataMapper.setup(:default, 'sqlite:///C:\Users\Orbital Think Pa\Documents\GitHub\teleprompterhack\project.db')
+
+
+ # Define a Post object to store a posted speech
+ class Post
+   include DataMapper::Resource
 
    property :id,         Serial    # An auto-increment integer key
    property :title,      String    # A varchar type string, for short strings
    property :body,       Text      # A text block, for longer string data.
    property :created_at, DateTime  # A DateTime, for any date you might like.
  end
- 
+
  DataMapper.finalize
- 
+
  #DataMapper.auto_migrate!
- 
+
  # Update any tables based on the defined schema
  DataMapper.auto_upgrade!
- 
+
+ #Create word-weight list
+ WordProcessing.create_word_list
  
  
  # Return the home page
@@ -35,6 +51,10 @@ require 'erb'
    erb :index
  end
  
+ post "/" do
+  @text = params['promptinput']
+  puts "#{@text}"
+ end
  
  # List all speeches in the db
  get '/posts' do
@@ -42,7 +62,7 @@ require 'erb'
  	@posts = Post.all
   erb :posts 
  end
- 
+
  # Add a new post to the database send params through the POST request
  post '/add' do
    @post = Post.create(
@@ -64,6 +84,8 @@ require 'erb'
      :created_at => Time.now
    )
  
+     )
+
    @post.save
  end
  

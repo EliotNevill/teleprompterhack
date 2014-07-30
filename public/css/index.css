@@ -21,11 +21,26 @@ body {
 	padding-bottom: 5px;
 	margin-left: 0;
 	text-align: left;
+	font-family: 'Audiowide', cursive;
 	}
 
 .header input[type=submit] {
-
+	right: 0;
+	position: absolute;
+	top: 5px;
+	bottom: 5px;
+	width: 150px;
+	font-size: 20px;
+	border-radius: 30px;
+	border: solid 3px black;
 }
+
+.header input[type=submit]:hover {
+	background-color: #D5BBBB;
+	font-weight: bold;
+	cursor: pointer;
+}
+
 
 .content {
 	position: absolute;
@@ -41,11 +56,15 @@ body {
 }
 
 .wrapper {
-	margin: 0 auto;
+	left: 50%;
+	top: 0;
+	bottom: 0;
+	margin-left: -480px; 
 	width: 960px;
-	position: relative;
+	position: absolute;
 }
 
 textarea {
 	resize: none;
+	font-size: 20px;
 }

@@ -3,7 +3,6 @@ require 'data_mapper' # requires all the gems listed above
 require 'dm-migrations'
 require 'sinatra'
 require 'erb'
-<<<<<<< HEAD
 
 
 # A Sqlite3 connection to a persistent database (should make relative to this script)
@@ -13,7 +12,6 @@ require 'erb'
  # Define a Post object to store a posted speech
  class Post
    include DataMapper::Resource
-=======
 require './word_processing'
 require 'time'
 

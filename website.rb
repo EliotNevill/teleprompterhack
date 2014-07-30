@@ -1,54 +1,37 @@
 require 'rubygems'
 require 'data_mapper' # requires all the gems listed above
 require 'dm-migrations'
-
 require 'sinatra'
 require 'erb'
-require 'open-uri'
+require './word_processing'
 require 'time'
 
-  #Words and their corrosponding weight
-  class WordAndWeight
-    def initialize(word , weight)
-      @word = word
-      @weight = Math.log(40000 /  weight.to_f)
-    end
-  end
 
-  #Creating a list of words and their weights
-  wordandweightlist = Array.new
-  web_file = open("http://ucrel.lancs.ac.uk/bncfreq/lists/2_2_spokenvwritten.txt")
-  web_file.each_line do |line|
-    linesegment = line.split("\t")
-    tempWord = WordAndWeight.new( linesegment[1] , linesegment[3] )
-    wordandweightlist.push(tempWord)
-    puts "#{wordandweightlist.last.instance_variable_get("@word")}\t#{wordandweightlist.last.instance_variable_get("@weight")}"
-  end
-  wordandweightlist.pop()
-  wordandweightlist.pop()
 
   
  # A Sqlite3 connection to a persistent database (should make relative to this script)
- DataMapper.setup(:default, 'sqlite:///C:\Users\Orbital Think Pa\Documents\GitHub\teleprompterhack\project.db')
- 
- 
- # Define a Post object to store a posted speech
- class Post
-   include DataMapper::Resource
+ #DataMapper.setup(:default, 'sqlite:///C:\Users\Orbital Think Pa\Documents\GitHub\teleprompterhack\project.db')
+# 
+# 
+ ## Define a Post object to store a posted speech
+ #class Post
+   #include DataMapper::Resource
+#
+   #property :id,         Serial    # An auto-increment integer key
+   #property :title,      String    # A varchar type string, for short strings
+   #property :body,       Text      # A text block, for longer string data.
+   #property :created_at, DateTime  # A DateTime, for any date you might like.
+ #end
+# 
+ #DataMapper.finalize
+# 
+ ##DataMapper.auto_migrate!
+# 
+ ## Update any tables based on the defined schema
+ #DataMapper.auto_upgrade!
 
-   property :id,         Serial    # An auto-increment integer key
-   property :title,      String    # A varchar type string, for short strings
-   property :body,       Text      # A text block, for longer string data.
-   property :created_at, DateTime  # A DateTime, for any date you might like.
- end
- 
- DataMapper.finalize
- 
- #DataMapper.auto_migrate!
- 
- # Update any tables based on the defined schema
- DataMapper.auto_upgrade!
- 
+ #Create word-weight list
+ WordProcessing.create_word_list
  
  
  # Return the home page
@@ -57,13 +40,17 @@ require 'time'
    erb :index
  end
  
+ post "/" do
+  @text = params['promptinput']
+  puts "#{@text}"
+ end
  
  # List all speeches in the db
  get '/posts' do
  	@date = Time.now
  	@posts = Post.all
   erb :posts 
-end
+ end
 
  # Add a new post to the database send params through the POST request
  post '/add' do
@@ -85,7 +72,7 @@ end
      :body       => "This is my speech about Young Rewired State. I loved it. See you next year",
      :created_at => Time.now
      )
-   
+
    @post.save
  end
  

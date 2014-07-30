@@ -25,6 +25,7 @@ require 'time'
    property :created_at, DateTime  # A DateTime, for any date you might like.
  end
 
+
  DataMapper.finalize
 
  #DataMapper.auto_migrate!

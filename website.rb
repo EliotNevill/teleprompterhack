@@ -5,14 +5,7 @@ require 'sinatra'
 require 'erb'
 
 
-# A Sqlite3 connection to a persistent database (should make relative to this script)
- DataMapper.setup(:default, "sqlite3://#{File.expand_path(File.dirname(__FILE__))}/project.db")
- 
- 
- # Define a Post object to store a posted speech
- class Post
-   include DataMapper::Resource
-require './word_processing'
+#require './word_processing'
 require 'time'
 
 
@@ -40,7 +33,7 @@ require 'time'
  DataMapper.auto_upgrade!
 
  #Create word-weight list
- WordProcessing.create_word_list
+ #WordProcessing.create_word_list
  
  
  # Return the home page
@@ -81,8 +74,6 @@ require 'time'
      :body       => "This is my speech about Young Rewired State. I loved it. See you next year",
      :created_at => Time.now
    )
- 
-     )
 
    @post.save
  end

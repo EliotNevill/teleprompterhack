@@ -1,34 +1,51 @@
 body {
 	margin: 0px;
 	padding: 0px;
+	background-color: #333;
 }
 
 .header	{
-		background: rgba(227, 227, 227, 0.75);
-		width: 100%;
+		background: rgb(227, 227, 227);
 		text-align: center;
 		border-bottom: solid 1px black;
-		position: fixed;
+		position: absolute;
 		height: 100px;
+		top: 0;
+		left: 0;
+		right: 0;
 	}
 
 .header h1 {
 	margin-bottom: 5px;
 	padding-top: 5px;
 	padding-bottom: 5px;
+	margin-left: 0;
+	text-align: left;
+	}
+
+.header input[type=submit] {
+
 }
 
 .content {
-
-	margin: 0 auto;
-	padding-top: 100px;
-	width: 960px;
-	border: solid 1px black;
-	min-height: 200%;
+	position: absolute;
+	top: 100px;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }
 
-.inputform {
-	max-width: 956px;
-	min-height: 100px;
-	min-width: 100px;
+.content .promptinput {
+	width: 100%;
+	height: 100%;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 960px;
+	position: relative;
+}
+
+textarea {
+	resize: none;
 }

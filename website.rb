@@ -86,7 +86,6 @@ post '/posts' do
   newid = Post.count
   redirect "/post/#{newid}"
   puts "a new id #{newid}"
-  WordProcessing.process_form_data(params[:body])
   puts "Added a new post titled: #{@post.title}"
 end
 
@@ -171,4 +170,11 @@ end
 
 
 #zoo  = Zoo.first(:name => 'Metro')
+get '/post/prompt' do
+  
+  redirect "" 
+end
 
+get "/scroll/:scrollid" do
+  erb :scroll
+end

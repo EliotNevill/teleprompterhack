@@ -55,7 +55,6 @@ DataMapper.auto_upgrade!
 #Create word-weight list
 #WordProcessing.create_word_list
 
-
 # Return the home page
 get '/' do
   @date = Time.now
@@ -169,7 +168,6 @@ get '/speechwords' do
   @words = WordFreq.all(:ll.gt => 0, :ll.lt => 1000)
   erb :wordlist
 end
-
 
 
 #zoo  = Zoo.first(:name => 'Metro')

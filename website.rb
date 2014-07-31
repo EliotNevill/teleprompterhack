@@ -71,7 +71,7 @@ get '/post/:id' do
   id = params[:id]
   puts "Looking for post id: #{id}"
   @post = Post.get(id)
-  erb :mypost
+  erb :scroll
 end
 
 
@@ -165,15 +165,4 @@ end
 get '/speechwords' do
   @words = WordFreq.all(:ll.gt => 0, :ll.lt => 1000)
   erb :wordlist
-end
-
-
-#zoo  = Zoo.first(:name => 'Metro')
-get '/post/prompt' do
-  
-  redirect "" 
-end
-
-get "/scroll/:scrollid" do
-  erb :scroll
 end

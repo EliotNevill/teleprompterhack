@@ -2,8 +2,9 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<title>Smartprompt</title>
-		<link rel="stylesheet" href="reset.css" />
-		<link rel="stylesheet" href="scroll.css" />
+		<link rel="stylesheet" href="/css/reset.css" />
+		<link rel="stylesheet" href="/css/index.css" />
+		<link rel="stylesheet" href="/css/scroll.css" />
 		<link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' />
 		<link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' />
 	</head>
@@ -11,15 +12,19 @@
 	<body>
 		<div class="header">
 			<div class="wrapper">
-				<h1>Smartprompt</h1>
-				<p>Best Prompter Online!</p>	
+				<h1><a href="/">Smartprompt</a></h1>
+				<p>Best Prompter Online!</p>
+				<span class="id">#<%= @post.id %></span>
 			</div>
 		</div>
+
 		<div class="content">
-			<div class="wrapper">	
-				<p><%= @post.id %></p>
-				<p><%= @post.title %></p>
-				<p><%= @post.body %></p>
+			<div class="wrapper">
+				<div class="scroll-area">
+					<h1><%= @post.title %></h1>
+					<%= @post.body %>
+				</div>
+			</div>
 		</div>
 	</body>
-%>
+</html>

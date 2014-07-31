@@ -54,7 +54,6 @@ DataMapper.auto_upgrade!
 
 #Create word-weight list
 #WordProcessing.create_word_list
-
 # Return the home page
 get '/' do
   @date = Time.now
@@ -83,7 +82,7 @@ post '/posts' do
     :body => params[:body],
     :created_at => Time.now
   )
-  newid = Post.count
+  newid = @post.id
   redirect "/post/#{newid}"
   puts "a new id #{newid}"
   WordProcessing.process_form_data(params[:body])

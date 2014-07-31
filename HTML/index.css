@@ -41,7 +41,6 @@ body {
 	cursor: pointer;
 }
 
-
 .content {
 	position: absolute;
 	top: 100px;
@@ -50,9 +49,14 @@ body {
 	bottom: 0;
 }
 
+.content .title {
+	width: 100%;
+	height: 10%;
+}
+
 .content .promptinput {
 	width: 100%;
-	height: 100%;
+	height: 90%;
 }
 
 .wrapper {

@@ -63,13 +63,13 @@ get '/' do
 end
 
 # List all speeches in the db
-get '/posts' do
+get '/post' do
   @date = Time.now
   @posts = Post.all
   erb :Posts 
 end
 
-get '/posts/:id' do 
+get '/post/:id' do 
   id = params[:id]
   puts "Looking for post id: #{id}"
   @post = Post.get(id)
@@ -84,6 +84,9 @@ post '/posts' do
     :body => params[:body],
     :created_at => Time.now
   )
+  newid = Post.count
+  redirect "/post/#{newid}"
+  puts "a new id #{newid}"
   puts "Added a new post titled: #{@post.title}"
 end
 

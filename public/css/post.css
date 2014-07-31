@@ -1,0 +1,24 @@
+.content .list-area {
+	color: #ddd;
+	padding-top: 25px;
+	font-size: 25px;
+}
+
+.content .list-area h1 {
+	font-size: 200%;
+}
+
+.content .list-area p {
+	margin-top: 20px;
+	font-family: "Times New Roman", serif;
+	line-height: 1.5;
+	letter-spacing: 1px;
+	word-spacing: 3px;
+}
+
+.header .id {
+	position: absolute;
+	right: 0;
+	font-size: 60px;
+	top: 20px;
+}

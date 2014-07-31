@@ -1,17 +1,40 @@
 <html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Smartprompt</title>
+		<link rel="stylesheet" href="/css/reset.css" />
+		<link rel="stylesheet" href="/css/index.css" />
+		<link rel="stylesheet" href="/css/posts.css" />
+		<link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' />
+		<link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' />
+	</head>
 	<body>
-		<% if !@posts.blank? %>
-			<ul>
-				<% for post in @posts %>
-					<li>
-						<a href="/post/<%= post.id %>">
-							<%= post.title %>
-						</a>
-					</li>
-				<% end %>
-			</ul>
-		<% else %>
-			<p>No posts available</p>
-		<% end %>
+		<div class="header">
+			<div class="wrapper">
+				<h1><a href="/">Smartprompt</a></h1>
+				<p>Best Prompter Online!</p>
+			</div>
+		</div>
+		<div class="content">
+			<div class="wrapper">
+				<div class="list-area">
+					<h1>Select a preloaded speech</h1>
+					<% if !@posts.blank? %>
+						<ul>
+							<% for post in @posts %>
+								<li>
+									<a href="/post/<%= post.id %>">
+										<%= post.title %>
+									</a>
+									<p> <%= post.body %> </p>
+								</li>
+							<% end %>
+						</ul>
+					<% else %>
+						<p>No posts available</p>
+					<% end %>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

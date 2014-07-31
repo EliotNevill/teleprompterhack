@@ -1,0 +1,15 @@
+<html>
+	<body>
+		<% if !@words.blank? %>
+			<ul>
+				<% for w in @words %>
+					<li>
+						<%= w.word %> 
+					</li>
+				<% end %>
+			</ul>
+		<% else %>
+			<p>No words available</p>
+		<% end %>
+	</body>
+</html>

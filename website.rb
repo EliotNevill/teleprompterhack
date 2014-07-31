@@ -4,7 +4,7 @@ require 'dm-migrations'
 require 'sinatra'
 require 'json'
 
-#require './word_processing'
+require './word_processing'
 require 'time'
 
 
@@ -14,7 +14,7 @@ require 'time'
 DataMapper.setup(:default, 'sqlite:project.db')
 #DataMapper.setup(:default, 'sqlite:///C:\Users\Orbital Think Pa\Documents\GitHub\teleprompterhack\project.db')
 
-
+WordProcessing.create_word_list
 
 # Define a Post object to store a posted speech
 class Post
@@ -87,6 +87,7 @@ post '/posts' do
   newid = Post.count
   redirect "/post/#{newid}"
   puts "a new id #{newid}"
+  WordProcessing.process_form_data(params[:body])
   puts "Added a new post titled: #{@post.title}"
 end
 

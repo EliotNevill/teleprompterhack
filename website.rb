@@ -11,7 +11,9 @@ require 'time'
 
 
 # A Sqlite3 connection to a persistent database (should make relative to this script)
-DataMapper.setup(:default, 'sqlite:///C:\Users\Orbital Think Pa\Documents\GitHub\teleprompterhack\project.db')
+DataMapper.setup(:default, 'sqlite:project.db')
+#DataMapper.setup(:default, 'sqlite:///C:\Users\Orbital Think Pa\Documents\GitHub\teleprompterhack\project.db')
+
 
 
 # Define a Post object to store a posted speech

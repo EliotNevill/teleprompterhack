@@ -47,8 +47,8 @@ class WordProcessing
       @@wordandweightlist << tempword
       puts "#{tempword.word}\t#{tempword.weight}"
     end
-    @@wordandweightlist.pop()
-    @@wordandweightlist.pop()
+    @@wordandweightlist.shift
+    @@wordandweightlist.shift
 
 
   end

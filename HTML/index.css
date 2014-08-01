@@ -34,7 +34,7 @@ input {
 	font-size: 50px;
 }
 
-.header input[type=submit] {
+.header .prompt {
 	font-family: 'Bangers', cursive;
 	right: 0;
 	position: absolute;
@@ -46,6 +46,20 @@ input {
 	border: solid 3px black;
 	outline: none;
 	letter-spacing: 3px;
+}
+
+.header .documents {
+	right: 250px;
+	position: absolute;
+	top: 20px;
+	bottom: 20px;
+	width: 210px;
+	font-size: 25px;
+	border-radius: 30px;
+	border: solid 3px black;
+	outline: none;
+	font-family: 'Bangers', cursive;
+	letter-spacing: 2px;
 
 }
 

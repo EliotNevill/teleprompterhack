@@ -6,16 +6,25 @@
 
 .content .list-area h1 {
 	font-size: 150%;
-	
+
 }
 
 .content .list-area p {
-	margin-top: 20px;
-	font-family: "Times New Roman", serif;
-	line-height: 1.5;
-	letter-spacing: 1px;
-	word-spacing: 3px;
+margin-top: 0px;
+font-family: "Times New Roman", serif;
+letter-spacing: 1px;
+font-size: 80%;
+color: #8A8A8A;
+
 }
+.content .list-area li {
+margin-top: 5px;
+font-family: "Times New Roman", serif;
+letter-spacing: 1px;
+overflow: hidden;
+max-height: 3em;
+}
+
 
 .header .id {
 	position: absolute;

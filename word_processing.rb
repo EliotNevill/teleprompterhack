@@ -11,7 +11,7 @@ class WordProcessing
     attr_accessor :word, :weight
     def initialize(word , weight)
       @word = word
-      @weight = Math.log(200000 /  weight.to_f) /10
+      @weight = Math.log(1000000 /  weight.to_f, 1.36)
     end
   end
 
@@ -42,13 +42,16 @@ class WordProcessing
 
   def self.create_word_list
     #Creating a list of words and their weights
-    
+    false_freq = 0
+    counter = 8
     web_file = open("http://ucrel.lancs.ac.uk/bncfreq/lists/2_2_spokenvwritten.txt")
     web_file.each_line do |line|
       linesegment = line.split("\t")
       tempword = WordAndWeight.new( linesegment[1] , linesegment[3] )
       @@wordandweightlist << tempword
-      puts "#{tempword.word}\t#{tempword.weight}"
+      puts "#{tempword.word}\t#{tempword.weight}\t#{false_freq}"
+      false_freq = counter ** 1.36
+      counter = counter + 1
     end
     @@wordandweightlist.shift
     @@wordandweightlist.shift
@@ -79,10 +82,16 @@ class WordProcessing
           displayword.weight = wordandfrequency.weight
         end
       end
-
-      displayword.weight = displayword.weight * wordFrequencys[displayword.formattedword] / @@wordfordisplaylist.length * 1000
-      puts "#{displayword.weight} * #{wordFrequencys[displayword.formattedword]} / #{@@wordfordisplaylist.length}"
-      puts displayword.weight
+      puts "#{displayword.weight}    /    #{wordFrequencys[displayword.formattedword]}"
+      displayword.weight = displayword.weight  / wordFrequencys[displayword.formattedword]
+    end
+    mutiplier = 0
+    @@wordfordisplaylist.each do |displayword|
+      mutiplier = displayword.weight + mutiplier
+    end
+      mutiplier = 10 /  (mutiplier / @@wordfordisplaylist.length)
+    @@wordfordisplaylist.each do |displayword|
+      displayword.weight = displayword.weight * mutiplier + 20
     end
     return @@wordfordisplaylist
 

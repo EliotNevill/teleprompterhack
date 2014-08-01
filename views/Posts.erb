@@ -21,7 +21,7 @@
 					<h1>Select a preloaded speech</h1>
 					<% if !@posts.blank? %>
 						<ul>
-							<% for post in @posts %>
+							<% for post in @posts.reverse %>
 								<li>
 									<a href="/post/<%= post.id %>">
 										<%= post.title %>

@@ -74,6 +74,7 @@ get '/post/:id' do
   id = params[:id]
   puts "Looking for post id: #{id}"
   @post = Post.get(id)
+  @processed_words = WordProcessing.process_form_data(Post.get(id).body)
   erb :scroll
 end
 

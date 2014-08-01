@@ -15,14 +15,16 @@ font-family: "Times New Roman", serif;
 letter-spacing: 1px;
 font-size: 80%;
 color: #8A8A8A;
+max-height: 3em;
+
 
 }
 .content .list-area li {
 margin-top: 5px;
 font-family: "Times New Roman", serif;
-letter-spacing: 1px;
+letter-spacing: 0px;
 overflow: hidden;
-max-height: 3em;
+
 }
 
 

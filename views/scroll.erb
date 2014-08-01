@@ -22,7 +22,13 @@
 			<div class="wrapper">
 				<div class="scroll-area">
 					<h1><%= @post.title %></h1>
-					<%= @post.body %>
+					<p>
+						<% for word in @processed_words %>
+							<span style=<%= word.getwordsize %>>
+							<%= word.word %>
+							</span>
+						<% end %>
+					</p>
 				</div>
 			</div>
 		</div>

@@ -33,6 +33,9 @@ class WordProcessing
       @frequency += 1
       puts "Frequency Increased"
     end
+    def getwordsize
+      "font-size:#{weight}px"
+    end
     
 
   end
@@ -77,10 +80,11 @@ class WordProcessing
         end
       end
 
-      displayword.weight = displayword.weight * wordFrequencys[displayword.formattedword] / @@wordfordisplaylist.length
+      displayword.weight = displayword.weight * wordFrequencys[displayword.formattedword] / @@wordfordisplaylist.length * 1000
       puts "#{displayword.weight} * #{wordFrequencys[displayword.formattedword]} / #{@@wordfordisplaylist.length}"
       puts displayword.weight
     end
+    return @@wordfordisplaylist
 
   end
   def self.get_text_output

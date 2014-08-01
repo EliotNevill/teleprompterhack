@@ -1,0 +1,101 @@
+2014-08-01T05:33:33.486876+00:00 app[web.1]: advertised	0.9903487552536128
+2014-08-01T05:33:33.486878+00:00 app[web.1]: powder	0.9903487552536128
+2014-08-01T05:33:33.486880+00:00 app[web.1]: closing	0.9903487552536128
+2014-08-01T05:33:33.486882+00:00 app[web.1]: Lake	0.9903487552536128
+2014-08-01T05:33:33.486883+00:00 app[web.1]: investigation	0.9903487552536128
+2014-08-01T05:33:33.486884+00:00 app[web.1]: crossing	0.9903487552536128
+2014-08-01T05:33:33.486885+00:00 app[web.1]: Marie	0.9903487552536128
+2014-08-01T05:33:33.486887+00:00 app[web.1]: Debbie	0.9903487552536128
+2014-08-01T05:33:33.486888+00:00 app[web.1]: yum	0.9903487552536128
+2014-08-01T05:33:33.486889+00:00 app[web.1]: Italian	0.9903487552536128
+2014-08-01T05:33:33.486890+00:00 app[web.1]: contained	0.9903487552536128
+2014-08-01T05:33:33.486892+00:00 app[web.1]: secret	0.9903487552536128
+2014-08-01T05:33:33.486893+00:00 app[web.1]: lamp	0.9903487552536128
+2014-08-01T05:33:33.486894+00:00 app[web.1]: blown	0.9903487552536128
+2014-08-01T05:33:33.486896+00:00 app[web.1]: guild	0.9903487552536128
+2014-08-01T05:33:33.486897+00:00 app[web.1]: dispute	0.9903487552536128
+2014-08-01T05:33:33.486899+00:00 app[web.1]: ends	0.9903487552536128
+2014-08-01T05:33:33.486901+00:00 app[web.1]: voucher	0.9903487552536128
+2014-08-01T05:33:33.486898+00:00 app[web.1]: banana	0.9903487552536128
+2014-08-01T05:33:33.486902+00:00 app[web.1]: sizes	0.9903487552536128
+2014-08-01T05:33:33.486903+00:00 app[web.1]: commit	0.9903487552536128
+2014-08-01T05:33:33.486904+00:00 app[web.1]: forwards	0.9903487552536128
+2014-08-01T05:33:33.486906+00:00 app[web.1]: considering	0.9903487552536128
+2014-08-01T05:33:33.486907+00:00 app[web.1]: editor	0.9903487552536128
+2014-08-01T05:33:33.486908+00:00 app[web.1]: nationally	0.9903487552536128
+2014-08-01T05:33:33.486909+00:00 app[web.1]: sixpence	0.9903487552536128
+2014-08-01T05:33:33.486914+00:00 app[web.1]: victim	0.9903487552536128
+2014-08-01T05:33:33.486916+00:00 app[web.1]: Tommy	0.9903487552536128
+2014-08-01T05:33:33.486919+00:00 app[web.1]: fives	0.9903487552536128
+2014-08-01T05:33:33.486915+00:00 app[web.1]: Kyle	0.9903487552536128
+2014-08-01T05:33:33.486918+00:00 app[web.1]: demonstrate	0.9903487552536128
+2014-08-01T05:33:33.486920+00:00 app[web.1]: O. / o.	0.9903487552536128
+2014-08-01T05:33:35.473886+00:00 app[web.1]: [2014-08-01 05:33:35] INFO  WEBrick::HTTPServer#start: pid=2 port=54292
+2014-08-01T05:33:35.473492+00:00 app[web.1]: Russian	0.9903487552536128[2014-08-01 05:33:35] INFO  WEBrick 1.3.1
+2014-08-01T05:33:35.473505+00:00 app[web.1]: [2014-08-01 05:33:35] INFO  ruby 2.0.0 (2014-05-08) [x86_64-linux]
+2014-08-01T05:33:31.051451+00:00 heroku[web.1]: Starting process with command `bundle exec rackup config.ru -p 54292`
+2014-08-01T05:33:36.317484+00:00 heroku[router]: at=info method=GET path="/" host=smartprompt.herokuapp.com request_id=c0df33c9-bb29-4cb5-b213-fdd1dc49c501 fwd="84.93.36.50" dyno=web.1 connect=0 service=19 status=200 bytes=569
+2014-08-01T05:33:36.510330+00:00 heroku[router]: at=info method=GET path="/css/reset.css" host=smartprompt.herokuapp.com request_id=088fadd0-fe4b-4f69-9f73-5052f1715436 fwd="84.93.36.50" dyno=web.1 connect=3 service=5 status=200 bytes=527
+2014-08-01T05:33:36.512317+00:00 heroku[router]: at=info method=GET path="/css/index.css" host=smartprompt.herokuapp.com request_id=a425b6a3-6437-4225-8490-91d686740a6a fwd="84.93.36.50" dyno=web.1 connect=0 service=5 status=200 bytes=527
+2014-08-01T05:33:36.372986+00:00 app[web.1]: 84.93.36.50 - - [01/Aug/2014 05:33:36] "GET / HTTP/1.1" 200 896 0.0045
+2014-08-01T05:33:36.568083+00:00 app[web.1]: 84.93.36.50 - - [01/Aug/2014 05:33:36] "GET /css/reset.css HTTP/1.1" 200 1093 0.0004
+2014-08-01T05:33:36.565778+00:00 app[web.1]: 84.93.36.50 - - [01/Aug/2014 05:33:36] "GET /css/index.css HTTP/1.1" 200 1332 0.0006
+2014-08-01T05:33:36.963751+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=smartprompt.herokuapp.com request_id=c2dc9ead-f7a6-4e74-bfe7-3d7c6ec6ab2a fwd="84.93.36.50" dyno=web.1 connect=0 service=4 status=404 bytes=458
+2014-08-01T05:33:35.489151+00:00 heroku[web.1]: State changed from starting to up
+2014-08-01T05:33:37.021479+00:00 app[web.1]: 84.93.36.50 - - [01/Aug/2014 05:33:37] "GET /favicon.ico HTTP/1.1" 404 18 0.0004
+2014-08-01T05:34:54.961927+00:00 heroku[router]: at=info method=POST path="/posts" host=smartprompt.herokuapp.com request_id=9e17126c-798e-4ec4-bf1a-c473a2b54eed fwd="84.93.36.50" dyno=web.1 connect=0 service=22 status=303 bytes=837
+2014-08-01T05:34:55.086742+00:00 heroku[router]: at=info method=GET path="/post/23" host=smartprompt.herokuapp.com request_id=fe00335a-a9f2-4a70-a83e-5e5629c104f1 fwd="84.93.36.50" dyno=web.1 connect=0 service=10 status=200 bytes=570
+2014-08-01T05:34:55.021735+00:00 app[web.1]: 84.93.36.50 - - [01/Aug/2014 05:34:55] "POST /posts HTTP/1.1" 303 - 0.0143
+2014-08-01T05:34:55.218720+00:00 heroku[router]: at=info method=GET path="/css/scroll.css" host=smartprompt.herokuapp.com request_id=6ca7a1ee-4c15-487c-8dd7-121f74746bc7 fwd="84.93.36.50" dyno=web.1 connect=3 service=3 status=200 bytes=535
+2014-08-01T05:34:55.148947+00:00 app[web.1]: 84.93.36.50 - - [01/Aug/2014 05:34:55] "GET /post/23 HTTP/1.1" 200 910 0.0065
+2014-08-01T05:34:55.280892+00:00 app[web.1]: 84.93.36.50 - - [01/Aug/2014 05:34:55] "GET /css/scroll.css HTTP/1.1" 200 354 0.0005
+2014-08-01T05:34:55.477228+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=smartprompt.herokuapp.com request_id=52dc5794-4f23-430e-b5a8-70007691167d fwd="84.93.36.50" dyno=web.1 connect=1 service=4 status=404 bytes=458
+2014-08-01T05:34:55.531709+00:00 app[web.1]: 84.93.36.50 - - [01/Aug/2014 05:34:55] "GET /favicon.ico HTTP/1.1" 404 18 0.0004
+2014-08-01T05:35:50.789508+00:00 heroku[router]: at=info method=POST path="/posts" host=smartprompt.herokuapp.com request_id=094cd551-4c90-474a-88f6-650dfcd29ef3 fwd="84.93.36.50" dyno=web.1 connect=5 service=29 status=303 bytes=2269
+2014-08-01T05:35:50.915165+00:00 heroku[router]: at=info method=GET path="/post/24" host=smartprompt.herokuapp.com request_id=a174f40f-93ce-45b6-b152-57e6d15ce2df fwd="84.93.36.50" dyno=web.1 connect=0 service=10 status=200 bytes=570
+2014-08-01T05:35:50.851975+00:00 app[web.1]: 84.93.36.50 - - [01/Aug/2014 05:35:50] "POST /posts HTTP/1.1" 303 - 0.0055
+2014-08-01T05:35:50.976256+00:00 app[web.1]: 84.93.36.50 - - [01/Aug/2014 05:35:50] "GET /post/24 HTTP/1.1" 200 2269 0.0052
+2014-08-01T05:36:04.037644+00:00 heroku[router]: at=info method=GET path="/post/1" host=smartprompt.herokuapp.com request_id=956aaedb-b6fe-45ac-a8f4-72417a0dde44 fwd="84.93.36.50" dyno=web.1 connect=2 service=11 status=200 bytes=500
+2014-08-01T05:36:04.098930+00:00 app[web.1]: 84.93.36.50 - - [01/Aug/2014 05:36:04] "GET /post/1 HTTP/1.1" 200 769 0.0057
+2014-08-01T05:36:06.852982+00:00 heroku[router]: at=info method=GET path="/post/2" host=smartprompt.herokuapp.com request_id=14ffa12b-098f-458c-a9e4-d4bda85989e7 fwd="84.93.36.50" dyno=web.1 connect=0 service=8 status=200 bytes=500
+2014-08-01T05:36:06.915881+00:00 app[web.1]: 84.93.36.50 - - [01/Aug/2014 05:36:06] "GET /post/2 HTTP/1.1" 200 787 0.0048
+2014-08-01T05:36:09.638844+00:00 heroku[router]: at=info method=GET path="/post/3" host=smartprompt.herokuapp.com request_id=c7f7e2ae-0153-47b5-882e-01cadd1324d9 fwd="84.93.36.50" dyno=web.1 connect=0 service=9 status=200 bytes=500
+2014-08-01T05:36:09.701569+00:00 app[web.1]: 84.93.36.50 - - [01/Aug/2014 05:36:09] "GET /post/3 HTTP/1.1" 200 3955 0.0054
+2014-08-01T05:36:18.164051+00:00 heroku[router]: at=info method=GET path="/post/4" host=smartprompt.herokuapp.com request_id=f1082040-30d9-4cb9-ac92-5790ff1cbd2d fwd="84.93.36.50" dyno=web.1 connect=0 service=11 status=200 bytes=500
+2014-08-01T05:36:18.225878+00:00 app[web.1]: 84.93.36.50 - - [01/Aug/2014 05:36:18] "GET /post/4 HTTP/1.1" 200 725 0.0052
+2014-08-01T06:20:29.697722+00:00 heroku[router]: at=info method=GET path="/" host=smartprompt.herokuapp.com request_id=953a22e0-fbf0-47c8-a7f7-0439b077a572 fwd="217.155.156.46" dyno=web.1 connect=1 service=8 status=200 bytes=604
+2014-08-01T06:20:29.741813+00:00 app[web.1]: 217.155.156.46 - - [01/Aug/2014 06:20:29] "GET / HTTP/1.1" 200 896 0.0009
+2014-08-01T06:20:29.987240+00:00 heroku[router]: at=info method=GET path="/css/index.css" host=smartprompt.herokuapp.com request_id=c55cfdae-ad85-4264-aa20-2257fa6fcb39 fwd="217.155.156.46" dyno=web.1 connect=1 service=4 status=304 bytes=655
+2014-08-01T06:20:30.220900+00:00 heroku[router]: at=info method=GET path="/css/reset.css" host=smartprompt.herokuapp.com request_id=e70a8cc9-8a64-464d-8066-87813ff1d37b fwd="217.155.156.46" dyno=web.1 connect=4 service=5 status=304 bytes=655
+2014-08-01T06:20:30.033932+00:00 app[web.1]: 217.155.156.46 - - [01/Aug/2014 06:20:30] "GET /css/index.css HTTP/1.1" 304 - 0.0004
+2014-08-01T06:20:30.265311+00:00 app[web.1]: 217.155.156.46 - - [01/Aug/2014 06:20:30] "GET /css/reset.css HTTP/1.1" 304 - 0.0003
+2014-08-01T06:20:30.617234+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=smartprompt.herokuapp.com request_id=71f9ea86-16fc-4c2d-be30-85cd96d26dd5 fwd="217.155.156.46" dyno=web.1 connect=2 service=5 status=404 bytes=544
+2014-08-01T06:20:30.661326+00:00 app[web.1]: 217.155.156.46 - - [01/Aug/2014 06:20:30] "GET /favicon.ico HTTP/1.1" 404 18 0.0005
+2014-08-01T06:20:55.210307+00:00 heroku[router]: at=info method=GET path="/post" host=smartprompt.herokuapp.com request_id=6c48c33b-3420-4d91-940b-e9bcbf1d4378 fwd="217.155.156.46" dyno=web.1 connect=4 service=1481 status=200 bytes=608
+2014-08-01T06:20:55.254404+00:00 app[web.1]: 217.155.156.46 - - [01/Aug/2014 06:20:55] "GET /post HTTP/1.1" 200 1928 1.4773
+2014-08-01T06:21:02.869281+00:00 heroku[router]: at=info method=GET path="/post/24" host=smartprompt.herokuapp.com request_id=740476d3-e295-4720-808a-76848c07f53b fwd="217.155.156.46" dyno=web.1 connect=1 service=403 status=200 bytes=659
+2014-08-01T06:21:02.913436+00:00 app[web.1]: 217.155.156.46 - - [01/Aug/2014 06:21:02] "GET /post/24 HTTP/1.1" 200 2269 0.3984
+2014-08-01T06:21:03.156315+00:00 heroku[router]: at=info method=GET path="/css/scroll.css" host=smartprompt.herokuapp.com request_id=8c8fc3f0-df31-4ecd-b000-a75f6b35adc0 fwd="217.155.156.46" dyno=web.1 connect=1 service=6 status=304 bytes=663
+2014-08-01T06:21:03.198205+00:00 app[web.1]: 217.155.156.46 - - [01/Aug/2014 06:21:03] "GET /css/scroll.css HTTP/1.1" 304 - 0.0005
+2014-08-01T06:21:37.749298+00:00 heroku[router]: at=info method=GET path="/post/20" host=smartprompt.herokuapp.com request_id=f187526c-300a-4c23-8dde-2f97589c7b27 fwd="217.155.156.46" dyno=web.1 connect=1 service=53 status=200 bytes=659
+2014-08-01T06:21:37.797086+00:00 app[web.1]: 217.155.156.46 - - [01/Aug/2014 06:21:37] "GET /post/20 HTTP/1.1" 200 764 0.0345
+2014-08-01T06:21:50.530420+00:00 heroku[router]: at=info method=GET path="/post/7" host=smartprompt.herokuapp.com request_id=5dd39109-e7c1-4d37-aa1d-63f3068e5817 fwd="217.155.156.46" dyno=web.1 connect=1 service=19 status=200 bytes=658
+2014-08-01T06:21:50.578341+00:00 app[web.1]: 217.155.156.46 - - [01/Aug/2014 06:21:50] "GET /post/7 HTTP/1.1" 200 773 0.0119
+2014-08-01T06:22:06.333428+00:00 heroku[router]: at=info method=GET path="/post/10" host=smartprompt.herokuapp.com request_id=6e37e761-cc56-4cf6-b2b0-d8995233b642 fwd="217.155.156.46" dyno=web.1 connect=2 service=26 status=200 bytes=659
+2014-08-01T06:22:06.380296+00:00 app[web.1]: 217.155.156.46 - - [01/Aug/2014 06:22:06] "GET /post/10 HTTP/1.1" 200 742 0.0110
+2014-08-01T06:26:53.668347+00:00 heroku[router]: at=info method=GET path="/post/" host=smartprompt.herokuapp.com request_id=0759145f-d654-4533-987d-ea58a943f992 fwd="217.155.156.46" dyno=web.1 connect=1 service=4 status=404 bytes=519
+2014-08-01T06:26:53.712979+00:00 app[web.1]: 217.155.156.46 - - [01/Aug/2014 06:26:53] "GET /post/ HTTP/1.1" 404 18 0.0007
+2014-08-01T06:26:56.493346+00:00 heroku[router]: at=info method=GET path="/post" host=smartprompt.herokuapp.com request_id=48ee928c-9f8a-4861-8951-0b1669aecf1f fwd="217.155.156.46" dyno=web.1 connect=0 service=53 status=200 bytes=518
+2014-08-01T06:26:56.537322+00:00 app[web.1]: 217.155.156.46 - - [01/Aug/2014 06:26:56] "GET /post HTTP/1.1" 200 1928 0.0481
+2014-08-01T06:27:12.040870+00:00 heroku[router]: at=info method=GET path="/post/12" host=smartprompt.herokuapp.com request_id=8f12af7f-7acf-47e5-beb7-d2e5f9906522 fwd="217.155.156.46" dyno=web.1 connect=0 service=11 status=200 bytes=569
+2014-08-01T06:27:12.265225+00:00 heroku[router]: at=info method=GET path="/css/reset.css" host=smartprompt.herokuapp.com request_id=9bc03ff5-c0c4-48bc-9324-b6ff203fee20 fwd="217.155.156.46" dyno=web.1 connect=1 service=5 status=200 bytes=533
+2014-08-01T06:27:12.085171+00:00 app[web.1]: 217.155.156.46 - - [01/Aug/2014 06:27:12] "GET /post/12 HTTP/1.1" 200 739 0.0061
+2014-08-01T06:27:12.409061+00:00 heroku[router]: at=info method=GET path="/css/scroll.css" host=smartprompt.herokuapp.com request_id=5ad9b1ee-4e06-42dd-af21-692f99d4cc6f fwd="217.155.156.46" dyno=web.1 connect=0 service=3 status=304 bytes=584
+2014-08-01T06:27:12.414587+00:00 heroku[router]: at=info method=GET path="/css/index.css" host=smartprompt.herokuapp.com request_id=fb4ce42d-5f8b-41b6-b51f-09765bf04323 fwd="217.155.156.46" dyno=web.1 connect=1 service=6 status=200 bytes=533
+2014-08-01T06:27:12.309390+00:00 app[web.1]: 217.155.156.46 - - [01/Aug/2014 06:27:12] "GET /css/reset.css HTTP/1.1" 200 1093 0.0007
+2014-08-01T06:27:12.449165+00:00 app[web.1]: 217.155.156.46 - - [01/Aug/2014 06:27:12] "GET /css/index.css HTTP/1.1" 200 1332 0.0006
+2014-08-01T06:27:12.454094+00:00 app[web.1]: 217.155.156.46 - - [01/Aug/2014 06:27:12] "GET /css/scroll.css HTTP/1.1" 304 - 0.0004
+2014-08-01T06:27:24.946780+00:00 heroku[router]: at=info method=GET path="/post/9" host=smartprompt.herokuapp.com request_id=fe290f80-e526-4787-998f-786c9e070958 fwd="217.155.156.46" dyno=web.1 connect=1 service=8 status=200 bytes=568
+2014-08-01T06:27:24.982071+00:00 app[web.1]: 217.155.156.46 - - [01/Aug/2014 06:27:24] "GET /post/9 HTTP/1.1" 200 731 0.0050
+2014-08-01T06:27:31.172198+00:00 heroku[router]: at=info method=GET path="/post/14" host=smartprompt.herokuapp.com request_id=284827e3-a575-4d52-96bb-cfe98d5f51dd fwd="217.155.156.46" dyno=web.1 connect=1 service=9 status=200 bytes=569
+2014-08-01T06:27:31.207622+00:00 app[web.1]: 217.155.156.46 - - [01/Aug/2014 06:27:31] "GET /post/14 HTTP/1.1" 200 752 0.0052

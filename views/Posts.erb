@@ -24,11 +24,7 @@
 							<% for post in @posts.reverse %>
 								<li>
 									<a href="/post/<%= post.id %>">
-										<% if post.title == "" %>
-											Untitled
-										<%else%>
-											<%= post.title%>
-										<% end %>
+										<%= post.title %>
 									</a>
 									 <p><%= post.body %></p>
 								</li>

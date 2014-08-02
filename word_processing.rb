@@ -17,17 +17,14 @@ class WordProcessing
 
  #Words that are going to be displayed
   class WordForDisplay
-    attr_accessor :frequency, :formattedword, :weight, :word
+    attr_accessor :frequency, :formattedword, :weight, :word, :iscolour
     
     def initialize (word)
       @word = word
-      @formattedword = @word
-      @formattedword.gsub!(/\p{^Alnum}/, '')
-      @formattedword.downcase!
+      @formattedword = "#{word}"
       @frequency = 0
       @weight = 0
-
-     
+      @iscolour = 0
     end
     def increase_frequency
       @frequency += 1
@@ -36,6 +33,11 @@ class WordProcessing
     def getwordsize
       "font-size:#{weight}px"
     end
+    def format_word
+      @formattedword.gsub!(/\p{^Alnum}/, '')
+      @formattedword.downcase!
+    end
+    
     
 
   end
@@ -60,13 +62,18 @@ class WordProcessing
   end
 
   def self.process_form_data (formtext)
+    @@wordfordisplaylist.clear
     puts formtext
     #Splitting the form imput
     text = formtext.split(" ")
+    puts text
     text.each do |word|
       tempword = WordForDisplay.new(word)
+      tempword.format_word
       @@wordfordisplaylist << tempword
+      puts tempword.word
     end
+
 
 
     #Frequency of the words within the form
@@ -82,6 +89,10 @@ class WordProcessing
           displayword.weight = wordandfrequency.weight
         end
       end
+      if is_number?(displayword.formattedword)
+        displayword.iscolour = 1
+        puts "is colour"
+      end
       puts "#{displayword.weight}    /    #{wordFrequencys[displayword.formattedword]}"
       displayword.weight = displayword.weight  / wordFrequencys[displayword.formattedword]
     end
@@ -92,12 +103,21 @@ class WordProcessing
       mutiplier = 10 /  (mutiplier / @@wordfordisplaylist.length)
     @@wordfordisplaylist.each do |displayword|
       displayword.weight = displayword.weight * mutiplier + 20
+      if displayword.weight > 40
+        displayword.weight = 40
+      end
+
     end
+    
+
     return @@wordfordisplaylist
 
   end
   def self.get_text_output
     @@wordfordisplaylist
+  end
+  def self.is_number? (number)
+    true if Float(number) rescue false
   end
 
 

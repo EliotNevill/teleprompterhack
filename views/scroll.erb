@@ -9,7 +9,20 @@
 		<link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' />
 	</head>
 
-	<body>
+	<body onLoad="pageScroll()" >
+		<script>
+		var speed = 1;
+				function pageScroll() {
+    			window.scrollBy(0,speed); // horizontal and vertical scroll increments
+    				scrolldelay = setTimeout('pageScroll()',10); // scrolls every 100 milliseconds
+				}
+				function increaseSpeed(){
+					speed +=1
+				}
+				function decreaseSpeed(){
+					speed -=1
+				}
+		</script>
 		<div class="header">
 			<div class="wrapper">
 				<h1><a href="/">Smartprompt</a></h1>
@@ -24,10 +37,15 @@
 					<h1><%= @post.title %></h1>
 					<p>
 						<% for word in @processed_words %>
-							<span style=<%= word.getwordsize %>>
+							<span style=<%= word.getwordsize %>
+								<% if word.iscolour == 1 %>
+									style="color: blue"
+								<% end %>
+								>
 							<%= word.word %>
 							</span>
 						<% end %>
+						
 					</p>
 				</div>
 			</div>

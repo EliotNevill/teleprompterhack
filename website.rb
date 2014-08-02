@@ -19,6 +19,7 @@ end
 
 WordProcessing.create_word_list
 
+
 # Define a Post object to store a posted speech
 class Post
   include DataMapper::Resource
@@ -58,6 +59,8 @@ DataMapper.auto_upgrade!
 #Create word-weight list
 #WordProcessing.create_word_list
 # Return the home page
+
+
 get '/' do
   @date = Time.now
   erb :index

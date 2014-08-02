@@ -37,11 +37,7 @@
 					<h1><%= @post.title %></h1>
 					<p>
 						<% for word in @processed_words %>
-							<span style=<%= word.getwordsize %>
-								<% if word.iscolour == 1 %>
-									style="color: blue"
-								<% end %>
-								>
+							<span style=<%= word.getwordstyle %>>
 							<%= word.word %>
 							</span>
 						<% end %>

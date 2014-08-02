@@ -17,7 +17,7 @@ class WordProcessing
 
  #Words that are going to be displayed
   class WordForDisplay
-    attr_accessor :frequency, :formattedword, :weight, :word, :iscolour
+    attr_accessor :frequency, :formattedword, :weight, :word, :iscolour, :color
     
     def initialize (word)
       @word = word
@@ -25,13 +25,14 @@ class WordProcessing
       @frequency = 0
       @weight = 0
       @iscolour = 0
+      @color = "#ddd"
     end
     def increase_frequency
       @frequency += 1
       puts "Frequency Increased"
     end
-    def getwordsize
-      "font-size:#{weight}px"
+    def getwordstyle
+      "font-size:#{weight}px;color:#{@color}"
     end
     def format_word
       @formattedword.gsub!(/\p{^Alnum}/, '')
@@ -91,6 +92,7 @@ class WordProcessing
       end
       if is_number?(displayword.formattedword)
         displayword.iscolour = 1
+        displayword.color = "cadetblue"
         puts "is colour"
       end
       puts "#{displayword.weight}    /    #{wordFrequencys[displayword.formattedword]}"
@@ -100,12 +102,18 @@ class WordProcessing
     @@wordfordisplaylist.each do |displayword|
       mutiplier = displayword.weight + mutiplier
     end
-      mutiplier = 10 /  (mutiplier / @@wordfordisplaylist.length)
+      mutiplier = 50 /  (mutiplier / @@wordfordisplaylist.length)
     @@wordfordisplaylist.each do |displayword|
-      displayword.weight = displayword.weight * mutiplier + 20
-      if displayword.weight > 40
+      displayword.weight = displayword.weight * mutiplier 
+      if displayword.weight > 80
+        displayword.weight = 80
+      elsif displayword.weight < 40
         displayword.weight = 40
       end
+      if displayword.iscolour == 1
+        displayword.weight = 65
+      end
+        
 
     end
     

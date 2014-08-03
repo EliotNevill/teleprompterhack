@@ -10,24 +10,14 @@
 	</head>
 
 	<body onLoad="pageScroll()" >
-		<script>
-		var speed = 1;
-				function pageScroll() {
-    			window.scrollBy(0,speed); // horizontal and vertical scroll increments
-    				scrolldelay = setTimeout('pageScroll()',20); // scrolls every 100 milliseconds
-				}
-				function increaseSpeed(){
-					speed +=1
-				}
-				function decreaseSpeed(){
-					speed -=1
-				}
-		</script>
+	<input type="text" onkeypress="keypress()">
 		<div class="header">
 			<div class="wrapper">
 				<h1><a href="/">Smartprompt</a></h1>
-				<p>Best Prompter Online!</p>
+				<pre>Best Prompter Online!				A/Z to control speed. Shift to pause.</pre>
+				
 				<span class="id">#<%= @post.id %></span>
+
 			</div>
 		</div>
 
@@ -46,5 +36,41 @@
 				</div>
 			</div>
 		</div>
+		<script>
+		var speed = 0;
+				function pageScroll() {
+    			window.scrollBy(0,speed); // horizontal and vertical scroll increments
+    				scrolldelay = setTimeout('pageScroll()',30); // scrolls every 100 milliseconds
+				}
+				function increaseSpeed(){
+					speed +=1
+				}
+				function decreaseSpeed(){
+					speed -=1
+				}
+				function stopScroll() {
+    				clearTimeout(scrolldelay);
+				}
+				window.onkeydown = function(e) {
+   var key = e.keyCode ? e.keyCode : e.which;
+
+   if (key == 16) {
+       stopScroll();
+   }else if (key == 65) {
+       decreaseSpeed();
+   
+}else if(key == 90) {
+       increaseSpeed();
+   }
+}
+   				window.onkeyup = function(e) {
+   var key = e.keyCode ? e.keyCode : e.which;
+
+   if (key == 16) {
+       pageScroll();
+   }
+}
+   			
+		</script>
 	</body>
 </html>
